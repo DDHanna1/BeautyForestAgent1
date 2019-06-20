@@ -15,5 +15,20 @@ namespace BeautyForestAgent
         {
             InitializeComponent();
         }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 종ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
