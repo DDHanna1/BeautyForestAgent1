@@ -36,7 +36,7 @@
             this.ntiTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.cmsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.폼보이기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.종ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.종료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cmsMenu.SuspendLayout();
             this.SuspendLayout();
@@ -77,12 +77,13 @@
             this.ntiTray.ContextMenuStrip = this.cmsMenu;
             this.ntiTray.Icon = ((System.Drawing.Icon)(resources.GetObject("ntiTray.Icon")));
             this.ntiTray.Text = "트레이 아이콘";
+            this.ntiTray.DoubleClick += new System.EventHandler(this.NtiTray_DoubleClick);
             // 
             // cmsMenu
             // 
             this.cmsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.폼보이기ToolStripMenuItem,
-            this.종ToolStripMenuItem});
+            this.종료ToolStripMenuItem});
             this.cmsMenu.Name = "cmsMenu";
             this.cmsMenu.Size = new System.Drawing.Size(181, 70);
             // 
@@ -91,13 +92,14 @@
             this.폼보이기ToolStripMenuItem.Name = "폼보이기ToolStripMenuItem";
             this.폼보이기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.폼보이기ToolStripMenuItem.Text = "폼 보이기";
+            this.폼보이기ToolStripMenuItem.Click += new System.EventHandler(this.폼보이기ToolStripMenuItem_Click);
             // 
-            // 종ToolStripMenuItem
+            // 종료ToolStripMenuItem
             // 
-            this.종ToolStripMenuItem.Name = "종ToolStripMenuItem";
-            this.종ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.종ToolStripMenuItem.Text = "폼";
-            this.종ToolStripMenuItem.Click += new System.EventHandler(this.종ToolStripMenuItem_Click);
+            this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
+            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.종료ToolStripMenuItem.Text = "종료";
+            this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -114,6 +116,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Beauty Forest Agent v0.1 by [3516] [정한나]";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.cmsMenu.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -128,7 +131,7 @@
         private System.Windows.Forms.NotifyIcon ntiTray;
         private System.Windows.Forms.ContextMenuStrip cmsMenu;
         private System.Windows.Forms.ToolStripMenuItem 폼보이기ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 종ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 종료ToolStripMenuItem;
     }
 }
 
